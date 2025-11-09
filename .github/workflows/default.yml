@@ -16,3 +16,5 @@ jobs:
         run: go mod download
       - name: Build
         run: go build -v ./...
+      - name: Run Program
+        run: go run main.go deck.go
