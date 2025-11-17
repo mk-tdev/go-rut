@@ -41,12 +41,18 @@ func main() {
 	// cards.printDeck()
 	
 	dealed, _ := deal(cards, 5);
-	dealed.printDeck();
+	dealed.printDeck()
+	printSeparator(40)
 	// remaining.printDeck();
 
 	greeting := "Hello"
 	fmt.Println("v", []byte(greeting))
+	printSeparator(40)
 	
 	// fmt.Println("dealed", dealToString(dealed, 5))
 	fmt.Println("dealed", dealed.dealToString())
+	printSeparator(40)
+
+	dealed.saveToFile("cards.txt")
+
 }
