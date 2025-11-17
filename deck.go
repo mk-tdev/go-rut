@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"strings"
 	"os"
+	"strings"
 )
 
 // create a new type of 'deck'
@@ -48,4 +48,18 @@ func (d deck) dealToString() string {
 
 func (d deck) saveToFile(filename string) error {
 	return os.WriteFile(filename, []byte(d.dealToString()), 0666)
+}
+
+func newDeckFromFile(filename string, exitOnError bool) deck {
+	bs, err := os.ReadFile(filename)
+	
+	if err != nil {
+		fmt.Println("Error: ", err)
+		if exitOnError {
+			os.Exit(1)
+		}
+
+		return newDeck()
+	}
+	return deck(strings.Split(string(bs), ", "))
 }

@@ -53,6 +53,8 @@ func main() {
 	fmt.Println("dealed", dealed.dealToString())
 	printSeparator(40)
 
-	dealed.saveToFile("cards.txt")
+	cards.saveToFile("defcards.txt")
 
+	localCards := newDeckFromFile("cardss.txt", false)
+	localCards.printDeck()
 }
