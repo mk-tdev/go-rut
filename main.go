@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 // func main() {
 // 	var name string = "World"
 // 	var age int = 25
@@ -34,27 +30,39 @@ import (
 // 	cards.printDeck()
 // }
 
+// func main() {
+// 	cards := newDeck()
+
+// 	// fmt.Println(cards)
+// 	cards.printDeck()
+
+// 	printSeparator(50)
+
+// 	dealed, _ := deal(cards, 5);
+// 	dealed.printDeck()
+// 	printSeparator(50)
+// 	// remaining.printDeck();
+
+// 	greeting := "Hello"
+// 	fmt.Println("v", []byte(greeting))
+// 	printSeparator(50)
+
+// 	// fmt.Println("dealed", dealToString(dealed, 5))
+// 	fmt.Println("dealed", dealed.dealToString())
+// 	printSeparator(40)
+
+// 	cards.saveToFile("defcards.txt")
+
+// 	localCards := newDeckFromFile("cardss.txt", false)
+// 	localCards.printDeck()
+// }
+
 func main() {
 	cards := newDeck()
+	cards.printDeck()
+	printSeparator(50)
 
-	// fmt.Println(cards)
-	// cards.printDeck()
-	
-	dealed, _ := deal(cards, 5);
-	dealed.printDeck()
-	printSeparator(40)
-	// remaining.printDeck();
-
-	greeting := "Hello"
-	fmt.Println("v", []byte(greeting))
-	printSeparator(40)
-	
-	// fmt.Println("dealed", dealToString(dealed, 5))
-	fmt.Println("dealed", dealed.dealToString())
-	printSeparator(40)
-
-	cards.saveToFile("defcards.txt")
-
-	localCards := newDeckFromFile("cardss.txt", false)
-	localCards.printDeck()
+	cards.shuffleDeck()
+	cards.printDeck()
+	printSeparator(50)
 }

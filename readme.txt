@@ -1,1 +1,1 @@
-nodemon --exec "go run main.go" -e go
+nodemon --exec "go run main.go common.go deck.go" -e go
