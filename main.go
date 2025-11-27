@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // func main() {
 // 	var name string = "World"
 // 	var age int = 25
@@ -65,4 +67,9 @@ func main() {
 	cards.shuffleDeck()
 	cards.printDeck()
 	printSeparator(50)
+
+	fmt.Println(sliceOfNumbers())
+	evenOrOdd(sliceOfNumbers())
+	sliceOfNums := sliceOfNumbers()
+	sliceOfNums.printEvenOrOdd()
 }

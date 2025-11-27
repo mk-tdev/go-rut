@@ -31,3 +31,19 @@ func TestSaveToFileAndNewDeckFromFile(t *testing.T) {
 		t.Errorf("Expected deck length 52, got %d", len(loadedDeck))
 	}
 }
+
+func TestShuffleDeck(t *testing.T) {
+	deck := newDeck()
+	deck.shuffleDeck()
+	if deck[0] == "Ace of Hearts" {
+		t.Errorf("Expected first card to be Ace of Hearts, got %s", deck[0])
+	}
+}
+
+func TestDeal(t *testing.T) {
+	deck := newDeck()
+	dealed, _ := deal(deck, 5)
+	if len(dealed) != 5 {
+		t.Errorf("Expected dealt length 5, got %d", len(dealed))
+	}
+}
