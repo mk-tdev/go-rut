@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // func main() {
 // 	var name string = "World"
@@ -59,7 +61,7 @@ import "fmt"
 // 	localCards.printDeck()
 // }
 
-func main() {
+func deckExample() {
 	cards := newDeck()
 	cards.printDeck()
 	printSeparator(50)
@@ -67,9 +69,17 @@ func main() {
 	cards.shuffleDeck()
 	cards.printDeck()
 	printSeparator(50)
+}
 
+func sliceExample() {
 	fmt.Println(sliceOfNumbers())
 	evenOrOdd(sliceOfNumbers())
 	sliceOfNums := sliceOfNumbers()
 	sliceOfNums.printEvenOrOdd()
+}
+
+func main() {
+	// deckExample()
+	// sliceExample()
+
 }

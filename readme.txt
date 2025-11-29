@@ -1,4 +1,4 @@
-nodemon --exec "go run main.go common.go deck.go" -e go
+nodemon --exec "go run main.go common.go deck.go evenorodd.go" -e go
 
 concepts:
 - slices
